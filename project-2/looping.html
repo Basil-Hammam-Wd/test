@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping JavaScript</title>
+</head>
+<body>
+
+    <h1>Belajar 3 Cara Looping Di JavaScript</h1>
+    <label for="berapa">Berapa nomor yang mau di cetak :</label>
+    <br><br>
+    <input type="number" id="berapa" onkeydown="handleKeyPress(event)">
+    <br><br>
+    <button onclick="ayoUlang()">Mengecheck Console</button>
+
+    <script>
+        function handleKeyPress(event) {
+            if(event.key === "Enter") {
+                ayoUlang();
+            }
+        }
+        function ayoUlang() {
+            var  nomor = document.getElementById("berapa").value;
+
+            // perulanganFor(nomor);
+            // perulanganWhile(nomor);
+            perulanganDoWhile(nomor);
+        }
+        // function perulanganFor(nomor) { 
+        //     for (let i = 0; i < nomor; i++) {
+        //         console.log(i + 1)
+        //     }
+        // }
+        // function perulanganWhile(nomor) {
+        //     let i = 0;
+        //     while (i < nomor) {
+        //         console.log(i + 1);
+        //         i++;
+        //     }
+        // }
+        function perulanganDoWhile(nomor) {
+            let i = 0
+            do {
+                console.log(i + 1);
+                i++;
+            } while (i < nomor);
+        }
+    </script>
+</body>
+</html>
